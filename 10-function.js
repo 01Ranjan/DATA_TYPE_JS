@@ -77,3 +77,19 @@ const myFunc = makeFunc();
 // myFunc();
 
 
+function add(num){
+    function addto(num2){
+        return num+num2
+    }
+    return addto;
+};
+
+const addTo5=add(5);
+console.log(addTo5(10));
+
+const addto3=add(3);
+console.log(addto3(3));
+
+
+
+
