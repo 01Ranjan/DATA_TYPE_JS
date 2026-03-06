@@ -33,5 +33,47 @@ arrowBrew();
 // postionShop
 
 // Second way 
-(()=>(console.log("IIFE Second way")
-))()
+// (()=>(console.log("IIFE Second way")
+// ))()
+function another(arrowBrew){
+return function newBrew(){
+    console.log("call from new brew ");
+    
+}
+}//  return function, take  is high order function
+
+const portionShop= (function(){
+    let inventory=0;
+    return{
+        brew(){
+            inventory++;
+            return`brew Portion ${inventory}`
+        },
+        getStock(){
+            return inventory;
+        }
+    }
+})();
+
+// console.log(portionShop);//holdes function defination
+
+// console.log(portionShop.brew());// run the function
+
+// console.log(portionShop.brew.inventory);// undefine 
+//***************journy start for clouser ***************/
+
+// in IIFE no clouser is allowed to take any tifin
+
+
+function makeFunc() {
+  const name = "Mozilla";
+  function displayName() {
+    console.log(name);
+  }
+  return displayName;
+}
+
+const myFunc = makeFunc();
+// myFunc();
+
+
