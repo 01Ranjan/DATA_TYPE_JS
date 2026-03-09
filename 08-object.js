@@ -37,6 +37,31 @@ Object.defineProperty(hero,"catelogId",{
     configurable:false
 })
 
+const myDetail={
+  name:'ranjan',
+  enrollement:'0117EC231044',
+  branch:'electronic',
+  passOutYear:2027,
+  currentCGPA:'7.34',
+
+}
+
+// for(const key in myDetail){
+//     console.log(key);
+    
+// }
+
+// for(const  key in myDetail){
+//   console.log(myDetail[key]);
+// }
+
+function myValues(myobj){
+    for(const key in myobj){
+        return key;// return first value before compleating the loop 
+    }
+}
+console.log(myValues(myDetail));
+
 
 
 
