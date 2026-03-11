@@ -18,7 +18,6 @@ function bootNavigation(mapLoaded){
     }
 }
 
-const status1= bootNavigation(true)
-
+const status1= bootNavigation(true);
 console.log(status1);
 

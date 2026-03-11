@@ -1,3 +1,20 @@
+function preaperOrder(dish){
+    return new Promise((res,rej)=>{
+        setTimeout(()=>{
+            if(!dish){
+                rej (new Error('no dish is prepred'))
+                return 
+            }
+            console.log(`${dish} is ready`);
+            res({dish,status:'preper'})
+            
+        },1000)
+    })
+}
+
+
+
+
 // const promise = new Promise((res, rej) => {
 //   setTimeout(() => {
 //     res("resolve ho gaya");
