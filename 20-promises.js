@@ -83,5 +83,20 @@ function boliWater(amount){
 
 // boli(2000);
 
+function grindleaf(){
+    return Promise.resolve('Leave Grinded') 
+}
+function steepTea(time){
+    return new Promise((res)=>{
+        setTimeout(()=>{
+            res(`steeped tea`)
+        },time)
+    })
+}
+
+function addSugar(spoons){
+    return  `Added ${spoons} of sugar`
+}
+ 
 
 
